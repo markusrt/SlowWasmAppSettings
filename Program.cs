@@ -10,6 +10,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
  // My code start
 builder.Services.AddSingleton<SlowWasmAppSettings.MyCode.MicStepsService>();
+builder.Services.AddSingleton<SlowWasmAppSettings.MyCode.MicStepsServiceEmbedded>();
 builder.Services.Configure<SlowWasmAppSettings.MyCode.BreakpointSettings>(options =>
 {
     builder.Configuration.Bind(options);
