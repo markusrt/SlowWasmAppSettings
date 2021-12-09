@@ -9,6 +9,9 @@ namespace SlowWasmAppSettings.MyCode
 
     public class Breakpoint
     {
-        public Dictionary<SpeciesTestingMethod, Dictionary<AntifungalAgent, List<MicStep>>> MicSteps { get; set; }
+        public Dictionary<string, Dictionary<string, List<MicStep>>> MicSteps { get; set; }
+        
+        // The following is even slower (prob. due to the fact that it needs to traverse one level deeper)
+        // public Dictionary<string, Dictionary<string, List<Dictionary<string,object>>>> MicSteps { get; set; }
     }
 }
